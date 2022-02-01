@@ -1,0 +1,139 @@
+@font-face {
+  font-family: votingFont;
+  src: url('Rye-Regular.ttf');
+}
+
+* {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100vh;
+  width: 100%;
+  background-color: lightskyblue;
+  font-family: votingFont;
+  overflow: hidden;
+}
+
+#flag {
+  position: absolute;
+  width: 13vw;
+  left: 7vw;
+  top: 20vh;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#trash {
+  position: absolute;
+  width: 12vw;
+  bottom: 1vh;
+  right: 10vw;
+  z-index: 2;
+  opacity: 0;
+}
+
+h1 {
+  font-size: 5vw;
+  text-align: center;
+  color: crimson;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 3.5vw;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+#r {
+  color: darkred;
+}
+
+#d {
+  color: blue;
+}
+
+#candidates {
+  height: 50vh;
+  background-color: coral;
+  margin-top: 30vh;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+#candidates h1 {
+  color: lightgray;
+  font-size: 3.5vw;
+  transition: all 0.5s;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px black;
+}
+
+#candidates div {
+  z-index: 1;
+}
+
+#candidates h1:hover {
+  transition: all 0.5s;
+  transform: translateY(-2vh) scale(1.15);
+  color: white;
+  text-shadow: 5px 5px 2px black;
+}
+
+#candidates p {
+  text-align: center;
+  margin-top: 1.5vh;
+  font-size: 2vw;
+  color: lightgray;
+  text-shadow: 2px 2px 2px black;
+  transition: all 0.5s;
+}
+
+#candidates p:hover {
+  transition: all 0.5s;
+  text-shadow: 4px 4px 2px black;
+  transform: translateY(-2vh) scale(1.15);
+  color: white;
+}
+
+.candidatePictures {
+  border-radius: 100%;
+  border: 2rem solid coral;
+  transform: translateY(-25vh);
+  width: 20vw;
+  height: 40vh;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  position: block;
+}
+
+#nixonPic {
+  cursor: url('yes.png') 15 15, pointer;
+  transition: all 0.5s;
+}
+
+#mcgovernPic {
+  position: static;
+  cursor: url('no.png') 15 15, pointer;
+  transition: all 0.5s;
+}
+
+.candidateInfo {
+  width: 10vw;
+  background-color: #fffb72;
+  position: absolute;
+  font-size: 1vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 1vw;
+  border-radius: 3rem;
+  z-index: 2;
+}
